@@ -4,6 +4,8 @@
 
 A local-first, safety-gated workspace and toolkit for ethical security research and bug-bounty work. Shakuni gives you a Burp-and-Linux-style tool suite plus an evidence-first research engine in one Next.js app that runs entirely on your own machine.
 
+**Find it, prove it, report it, without leaving your machine.**
+
 > Authorized testing only. Shakuni is for security research you are permitted to do: your own systems, or targets covered by a bug-bounty program whose scope and rules you follow. It does not grant authorization to test anything. See [Responsible use](#responsible-use).
 
 ## Features at a glance
@@ -19,6 +21,19 @@ A local-first, safety-gated workspace and toolkit for ethical security research 
 ## Why Shakuni
 
 Most research needs a scatter of tools: a proxy, an encoder, a diff tool, a chain console, a scanner, a notebook. Shakuni brings the common ones into one place, keeps everything on localhost, and wraps the dangerous parts in explicit safety gates (testnet-only, no mainnet, local-only API routes, non-volumetric by default). It is built to help you get to a reproducible proof of concept, not to spray payloads.
+
+### One local app instead of juggling
+
+| Instead of | Shakuni gives you |
+| --- | --- |
+| Burp Repeater and Intruder | An HTTP workbench: repeater, fuzzer, and a cross-tenant IDOR/BOLA matrix |
+| subfinder, dnsx, httpx, ffuf, gau | A Recon Suite in one place |
+| CyberChef for the common ops | Decoder and Comparer |
+| solc plus quick static checks | Contract Scanner and an AST-level Solidity Analyzer |
+| ad-hoc Foundry scripts | A one-click PoC harness |
+| scattered notes and templates | Knowledge Base, Asset Playbook, and Report Builder |
+
+Shakuni covers the common uses of these, running locally and offline where it can. It does not replace the full depth of each tool, and it is never a substitute for your own judgment and authorization.
 
 ## The tool suite
 
@@ -108,3 +123,7 @@ Shakuni is a research tool. Use it only against systems you own or are explicitl
 ## License
 
 [MIT](LICENSE).
+
+---
+
+If Shakuni is useful to you, a star helps other researchers find it. New contributors are welcome: start with an issue labeled [good first issue](https://github.com/vishalkelur28-cyber/shakuni/labels/good%20first%20issue).
