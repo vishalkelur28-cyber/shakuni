@@ -1,8 +1,20 @@
 # Shakuni
 
+[![CI](https://github.com/vishalkelur28-cyber/shakuni/actions/workflows/ci.yml/badge.svg)](https://github.com/vishalkelur28-cyber/shakuni/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A local-first, safety-gated workspace and toolkit for ethical security research and bug-bounty work. Shakuni gives you a Burp-and-Linux-style tool suite plus an evidence-first research engine in one Next.js app that runs entirely on your own machine.
 
 > Authorized testing only. Shakuni is for security research you are permitted to do: your own systems, or targets covered by a bug-bounty program whose scope and rules you follow. It does not grant authorization to test anything. See [Responsible use](#responsible-use).
+
+## Features at a glance
+
+- HTTP workbench for API testing: a request repeater, an Intruder-style fuzzer, and a cross-tenant IDOR/BOLA authorization matrix.
+- Web recon: subdomain enumeration, DNS lookups, host probing, content discovery, and Wayback URLs.
+- Encoders and a diff tool: Base64, URL, HTML, Hex, Unicode, ROT13, JWT decode, SHA hashes, and a response comparer.
+- Smart-contract security: an offline, multi-language vulnerability scanner, AST-level Solidity static analysis with solc, and a Foundry proof-of-concept harness.
+- Web3 chain tooling: testnet RPC reads and an attestation lab (keccak, ECDSA sign and recover, EIP-712).
+- Research and reporting: a searchable AppSec knowledge base, a per-asset bug-bounty playbook, a duplicate and prior-art checker, and a report builder.
+- Local-first and safety-gated: runs on localhost, keeps chain operations testnet-only, and stays non-volumetric by default.
 
 ## Why Shakuni
 
