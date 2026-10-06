@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest a new tool or an improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do that Shakuni does not help with yet?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What tool or change would solve it? Sketch the UI or behavior if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: How it stays within the safety model
+      description: >
+        Shakuni is local-first and for authorized testing only. If the idea
+        touches the network, runs processes, or performs chain operations,
+        describe how it stays local-only, testnet-only, and non-volumetric.
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true

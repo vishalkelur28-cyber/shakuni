@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a problem with Shakuni
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Shakuni. Please do not paste any real target
+        data, findings, credentials, or secrets into this report.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: One step per line.
+      placeholder: |
+        1. Open /recon
+        2. Run a DNS lookup on example.com
+        3. See the error
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Which tool or page
+      placeholder: Request Workbench, Recon Suite, Solidity Analyzer, ...
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS and Node version (node -v).
+      placeholder: Windows 11, Node 22.15.0
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Before submitting
+      options:
+        - label: This report contains no real target data, credentials, or secrets.
+          required: true
+        - label: I searched existing issues and this is not a duplicate.
+          required: true

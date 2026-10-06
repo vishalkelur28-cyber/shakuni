@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security issue in Shakuni itself
+    url: https://github.com/vishalkelur28-cyber/shakuni/security/advisories/new
+    about: Found a vulnerability in Shakuni's own code (for example a way to bypass the local-only guard)? Report it privately here, not as a public issue.
