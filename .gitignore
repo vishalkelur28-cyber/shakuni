@@ -1,0 +1,53 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+
+# Build caches
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment and secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------------------
+# Private research artifacts. Shakuni is the open-source product; the findings,
+# hunt logs, target clones and internal planning from a live research campaign
+# are NOT part of it and must stay out of the public repository.
+# ---------------------------------------------------------------------------
+/ARC_*.md
+/arc-node-*.md
+/arc-node-*.json
+/malachite-*.json
+/run-arcnode-hunt.mjs
+/run-malachite-hunt.mjs
+/STRATEGY_PLAYBOOK.md
+/SHAKUNI_BUILD_PROMPT.md
+/RUNTIME_SETUP.md
+/Shakuni_Build_Plan.xlsx
+/*.rar
+/Shakuni.tsx
+
+# Third-party audit target clones (other projects' code, not ours)
+/.targets/
+
+# Foundry PoC workspace (set up locally, see README). The harness writes tests
+# here at runtime; the scaffold, forge-std and build output are not committed.
+/foundry/
+
+# Campaign test suites and smoke scripts (regenerate locally)
+/tests/
+/smoke-test.mjs

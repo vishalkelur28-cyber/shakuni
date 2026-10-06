@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  @apply bg-bg font-sans text-white antialiased;
+  overflow-wrap: anywhere;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.accent");
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(143, 176, 255, 0.35);
+}
+
+@layer base {
+  /* An implicit grid track and a fieldset both default to min-width:auto, so one long
+     unbreakable line can widen the whole page on phones. Utilities like md:grid-cols-3 still override this. */
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  fieldset { min-width: 0; }
+}
+
+@layer components {
+  /* surfaces */
+  .card { @apply rounded-2xl border border-white/[.08] bg-panel; }
+  .card-p { @apply p-5 sm:p-6; }
+  .well { @apply rounded-xl border border-white/[.06] bg-black/25; }
+  .kicker { @apply text-[11px] font-medium uppercase tracking-[.14em] text-gray-500; }
+  .h2 { @apply text-lg font-semibold tracking-tight; }
+  .muted { @apply text-sm leading-6 text-gray-400; }
+
+  /* controls */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100; }
+  .btn-primary { @apply bg-white font-semibold text-black hover:bg-gray-200; }
+  .btn-ghost { @apply border border-white/10 text-gray-300 hover:bg-white/5 hover:text-white; }
+  .btn-sm { @apply rounded-lg px-3 py-2 text-xs; }
+  .input { @apply w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-gray-600 focus:border-accent/60; }
+  .label { @apply block text-xs font-medium text-gray-400; }
+  .chip { @apply inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs text-gray-300; }
+
+  /* status */
+  .callout { @apply rounded-xl border px-4 py-3 text-sm leading-6; }
+  .callout-info { @apply border-white/10 bg-white/[.03] text-gray-300; }
+  .callout-warn { @apply border-yellow-500/25 bg-yellow-500/[.06] text-yellow-100/90; }
+  .callout-ok { @apply border-green-500/25 bg-green-500/[.06] text-green-200; }
+  .callout-danger { @apply border-red-500/25 bg-red-500/[.06] text-red-200; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold; }
+  .badge-green { @apply bg-green-500/15 text-green-300; }
+  .badge-yellow { @apply bg-yellow-500/15 text-yellow-300; }
+  .badge-red { @apply bg-red-500/15 text-red-300; }
+  .badge-blue { @apply bg-accent/15 text-accent; }
+  .badge-gray { @apply bg-white/10 text-gray-300; }
+
+  /* layout helpers */
+  .stat-grid { @apply grid grid-cols-2 gap-3 lg:grid-cols-4; }
+  .stat-grid-5 { @apply grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5; }
+}
